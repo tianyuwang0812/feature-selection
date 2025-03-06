@@ -1,0 +1,11 @@
+clear
+clc
+shuju=readtable("shuju.xlsx");
+covering_iris=table2array(shuju(:,1:end-1));
+d={1:762,763:1372};
+beta=0.1;
+tic
+covering_iris=shujuchuli(covering_iris);
+red_iris=Core_based_feature_selection(covering_iris,d,beta);
+toc
+time=202.272392;
