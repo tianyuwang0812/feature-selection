@@ -88,7 +88,7 @@ while ~all(DIS_total_remain(:) == 0)
     [~,selected]=max(DIS_num);
     reduct=[reduct,selected];
     DIS_total_remain=DIS_total_remain-DIS_remain(:,:,selected);
-    feature_remain(selected)=[];
+    feature_remain(feature_remain==selected)=[];
 
 end
 end
